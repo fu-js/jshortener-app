@@ -1,10 +1,28 @@
-# jshortener-app
+# JShortener
 
 Dự án rút gọn liên kết (URL Shortener) được xây dựng với [Next.js](https://nextjs.org) và triển khai trên [Cloudflare Workers](https://workers.cloudflare.com/).
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/fu-js/jshortener-app)
 
 ![Screenshot](screen_shot.png)
+
+## 📋 Danh sách kiểm tra triển khai nhanh (Quick Deploy Checklist)
+
+Sau khi nhấn nút "Deploy to Cloudflare Workers", bạn sẽ được chuyển đến trang quản trị Cloudflare. Tại đây, bạn cần cấu hình các biến môi trường sau để ứng dụng hoạt động chính xác.
+
+### 🔑 Các biến cần cấu hình (Required Variables)
+
+- `BETTER_AUTH_SECRET` - Một chuỗi ký tự ngẫu nhiên dùng để bảo mật session.
+- `BETTER_AUTH_URL` - URL gốc của ứng dụng (ví dụ: `https://jshortener.uk` hoặc `http://localhost:3000` khi chạy nội bộ).
+
+### 🛠️ Cấu hình phát triển cục bộ (Local Development)
+
+Để chạy dự án trên máy cá nhân, hãy tạo file `.dev.vars` tại thư mục gốc và thêm nội dung sau:
+
+```bash
+BETTER_AUTH_SECRET=your_secret_key_here
+BETTER_AUTH_URL=http://localhost:3000
+```
 
 ## Công nghệ sử dụng
 
