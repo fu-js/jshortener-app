@@ -15,6 +15,17 @@ Sau khi nhấn nút "Deploy to Cloudflare Workers", bạn sẽ được chuyển
 - `BETTER_AUTH_SECRET` - Một chuỗi ký tự ngẫu nhiên dùng để bảo mật session.
 - `BETTER_AUTH_URL` - URL gốc của ứng dụng (ví dụ: `https://jshortener.uk` hoặc `http://localhost:3000` khi chạy nội bộ).
 
+### ⚙️ Cấu hình Workers Builds
+
+Trong trang cấu hình triển khai, thiết lập các lệnh sau:
+
+| Cài đặt | Giá trị |
+|---------|---------|
+| **Build command** | `npm run build:prod` |
+| **Deploy command** | `npm run deploy:prod` |
+
+> **Lưu ý**: Lệnh `build:prod` sẽ tự động chạy migrations D1 trước khi build ứng dụng.
+
 ### 🛠️ Cấu hình phát triển cục bộ (Local Development)
 
 Để chạy dự án trên máy cá nhân, hãy tạo file `.dev.vars` tại thư mục gốc và thêm nội dung sau:
